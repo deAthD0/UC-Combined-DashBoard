@@ -29,7 +29,6 @@ if bool(sidebars):
             column=c[count]
             try:
                 st.empty()
-
                 cell_val=sidebars.get(column)
                 df=valueSelect(df,column,str(cell_val[0])) 
                 df_2=valueSelect(df,column,str(cell_val[0]))
