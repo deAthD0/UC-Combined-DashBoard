@@ -1,5 +1,4 @@
 import streamlit as st
-import plotly.graph_objects as go
 import pandas as pd
 from functions import valueSelect
 from functions import checkKey
