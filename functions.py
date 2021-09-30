@@ -26,3 +26,18 @@ def checkKey(dict, key):
         return True
     else:
         return False
+
+def Checker(df,sidebars):
+    dk=df
+    k=pd.DataFrame()
+    c=list(sidebars.keys())
+    for column in c:
+        cell_val=sidebars.get(column)
+        if(len(cell_val)>=1):
+            k=pd.DataFrame()
+            for i in cell_val:
+                temp=valueSelect(dk,column,str(i))
+                k=k.append(temp)
+            dk=k
+
+    return dk
