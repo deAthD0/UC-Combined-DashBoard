@@ -3,7 +3,6 @@ import csv
 import streamlit as st
 
 def valueSelect(df,col,value):
-    # print(value)
    
     uniqueValues=df[col].unique()
     o=df[col].value_counts()
@@ -21,17 +20,7 @@ def valueSelect(df,col,value):
 
     df2=df.loc[(df[col] == value)]
     return df2
-    
-# data = pd.read_excel("Combined data UC-I_AHP GM_with intersectional.xlsm")
-# data2=valueSelect(data,'Inyourfamilyunitdoyoulivewithanydependentpersonchildrenorelderl','Preschool age children (under 5 years)')
-# print(data2)
-# data3=valueSelect(data2,'Doyouconsideryourselftoliveina','An urban environment')
-# print(data3)
-# data4=valueSelect(data3,'Whatisyourprofessionalstatus','Paid employment')
-# print(data4)
 
-# data5=valueSelect(data4,'Whichreligiousgroupdoyoumostidentifywith','Christian (all denominations)')
-# print(data5)
 def checkKey(dict, key):      
     if key in dict:
         return True

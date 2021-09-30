@@ -8,14 +8,6 @@ st.write("""# Data""")
 
 df = pd.read_excel("Combined data UC-I_AHP GM_with intersectional.xlsm")
 df_2=pd.read_excel("1-UC-I FCG+ ZTM_201112_Updated.xlsx")
-# df = pd.read_excel("1-UC-I FCG+ ZTM_201112_Updated.xlsx")
-
-# st.write(df)
-is_check = st.checkbox("Display Data")
-if is_check:
-    st.table(df)
-
-# columns = st.sidebar.multiselect("Enter the variables", df.columns)
 
 sidebars = {}
 listOfSide=['Doyouconsideryourselftoliveina','Whatisthehighestlevelofeducationyouhaveachieved','Whatisyouraverageyearlyincome','Inyourfamilyunitdoyoulivewithanydependentpersonchildrenorelderl','Whatisyourhouseholdtype','Doyoutravelonaweeklybasiswithadependentpersonchildrenelderlycar','Whatisyourprofessionalstatus','Whichreligiousgroupdoyoumostidentifywith','Inemploymentdoyou','Doyoucurrentlyhaveanillnessimpairmentordisabilitywhichaffectsho','Whatisyourmaincitizenship', 'Doyouidentifyas','Areyoucurrentlyworkingintransport']
@@ -50,7 +42,9 @@ if bool(sidebars):
             pass
         count=count+1
 
+st.write("""Combined data""")
 st.dataframe(df)
+st.write("""UC-1""")
 st.write(df_2)
 
 # 'ResidentialDetailsWheredoyoucurrentlylive', 'Whatagebracketareyou', 'Ifyeswhichtransportsectordoyouworkin','Doyouconsideryourselftobe',
